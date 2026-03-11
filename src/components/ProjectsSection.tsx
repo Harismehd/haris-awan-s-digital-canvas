@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
@@ -70,27 +70,31 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
 );
 
 const ProjectsSection = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section id="projects" className="section-padding relative z-10 overflow-hidden" ref={containerRef}>
+    <section id="projects" className="section-padding relative z-10">
       <div className="max-w-7xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-center mb-16"
+          className="text-3xl md:text-4xl font-bold text-center mb-4"
         >
           Featured <span className="text-gradient">Projects</span>
         </motion.h2>
+        <p className="text-center text-muted-foreground text-sm mb-12">
+          ← Drag or scroll horizontally →
+        </p>
       </div>
 
-      <motion.div style={{ x }} className="flex gap-6 pl-6 md:pl-20">
+      <motion.div
+        ref={scrollRef}
+        className="flex gap-6 px-6 md:px-20 overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing"
+        drag="x"
+        dragConstraints={scrollRef}
+        style={{ scrollSnapType: "x mandatory" }}
+      >
         {projects.map((project, i) => (
           <ProjectCard key={project.title} project={project} index={i} />
         ))}
