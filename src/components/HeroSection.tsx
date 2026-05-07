@@ -32,7 +32,7 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative section-padding">
-      <div className="max-w-5xl mx-auto text-center relative z-10">
+      <div className="max-w-5xl mx-auto text-center z-10">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -91,13 +91,15 @@ const HeroSection = () => {
           </a>
         </motion.div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        >
+      </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2 }}
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10"
+      >
           <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center">
             <motion.div
               animate={{ y: [0, 12, 0] }}
@@ -105,8 +107,7 @@ const HeroSection = () => {
               className="w-1.5 h-1.5 bg-primary rounded-full mt-2"
             />
           </div>
-        </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 };
