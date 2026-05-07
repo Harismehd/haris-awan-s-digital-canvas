@@ -40,21 +40,21 @@ const AboutSection = () => {
             className="text-center md:text-left"
           >
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              I'm a passionate Full Stack Developer and UI Designer based in Pakistan, 
-              crafting beautiful digital experiences that blend aesthetics with functionality. 
-              With expertise in modern web technologies, I turn ideas into polished, 
-              high-performance applications.
+              I am a Full-stack developer with a passion for deploying production
+              applications, including multi-tenant SaaS and real-time communication
+              platforms. I focus on clean architecture and performance, while
+              continually striving to enhance my skills in ML and AI.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              As a freelancer, I've worked with startups and businesses worldwide, 
-              delivering pixel-perfect interfaces and robust backend solutions. 
-              I believe great design is invisible — it just works.
+              My expertise spans across a variety of languages and tools, empowering
+              me to ship fast and effectively. I take pride in my ability to work
+              independently and deliver high-quality solutions.
             </p>
             <div className="flex gap-8 justify-center md:justify-start">
               {[
-                { value: "3+", label: "Years Exp." },
-                { value: "50+", label: "Projects" },
-                { value: "30+", label: "Clients" },
+                { value: "5+", label: "Production Apps" },
+                { value: "SaaS", label: "Multi-Tenant" },
+                { value: "AI/ML", label: "Focus" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
                   <div className="text-2xl md:text-3xl font-bold text-gradient">{stat.value}</div>
