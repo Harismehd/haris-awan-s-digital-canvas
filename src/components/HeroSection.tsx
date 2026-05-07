@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const roles = ["Full Stack Developer", "UI Designer", "Freelancer"];
+const roles = ["Full-Stack Developer", "AI / ML Engineer", "SaaS Architect", "Real-Time Systems"];
 
 const HeroSection = () => {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -61,6 +61,16 @@ const HeroSection = () => {
           <span className="text-primary animate-pulse-glow">|</span>
         </motion.div>
 
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1 }}
+          className="max-w-2xl mx-auto text-muted-foreground text-base md:text-lg leading-relaxed mb-10"
+        >
+          Full-stack Developer building production-grade SaaS platforms, real-time
+          systems, and AI-powered applications.
+        </motion.p>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -71,13 +81,13 @@ const HeroSection = () => {
             href="#projects"
             className="glow-btn bg-primary text-primary-foreground px-8 py-3.5 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
           >
-            View My Work
+            Explore Work
           </a>
           <a
             href="#contact"
             className="glass-card px-8 py-3.5 rounded-lg font-semibold text-foreground hover:border-primary/50 transition-all duration-300 hover:scale-105 text-center"
           >
-            Get In Touch
+            Contact Me
           </a>
         </motion.div>
 
