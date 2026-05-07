@@ -118,3 +118,7 @@
     display: none;
   }
 }
+/* Hide Lovable Badge */
+#lovable-badge {
+  display: none !important;
+}
