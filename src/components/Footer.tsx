@@ -12,7 +12,7 @@ const Footer = () => {
     <footer className="relative z-10 border-t border-border py-12 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <p className="text-muted-foreground text-sm">
-          © 2026 Haris Awan. Built with passion.
+          Built by <span className="text-foreground font-medium">Haris Awan</span> · © {new Date().getFullYear()}
         </p>
         <div className="flex items-center gap-4">
           {socials.map(({ icon: Icon, href, label }) => (

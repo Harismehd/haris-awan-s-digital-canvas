@@ -97,23 +97,27 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
       <motion.button
         layout="position"
         onClick={() => setOpen(!open)}
-        className="w-full text-left flex items-start justify-between gap-4"
+        className="w-full text-left flex items-center justify-between gap-4"
       >
-        <div>
-          <p className="text-xs font-mono text-primary tracking-widest uppercase mb-2">
-            {String(index + 1).padStart(2, "0")} · {project.type}
+        <div className="min-w-0">
+          <p className="text-[11px] font-mono text-primary tracking-widest uppercase mb-2">
+            {String(index + 1).padStart(2, "0")} — {project.type}
           </p>
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-gradient transition-all">
+          <h3 className="text-xl md:text-2xl font-semibold text-foreground group-hover:text-gradient transition-all">
             {project.title}
           </h3>
-          <p className="text-muted-foreground mt-1">{project.tagline}</p>
+          {!open && (
+            <p className="text-muted-foreground text-sm mt-2 truncate">
+              {project.stack.slice(0, 4).join(" · ")}
+            </p>
+          )}
         </div>
         <motion.div
           animate={{ rotate: open ? 45 : 0 }}
           transition={{ duration: 0.3 }}
-          className="shrink-0 w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary"
+          className="shrink-0 w-9 h-9 rounded-full border border-primary/30 flex items-center justify-center text-primary"
         >
-          <Plus size={18} />
+          <Plus size={16} />
         </motion.div>
       </motion.button>
 
@@ -128,6 +132,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
             className="overflow-hidden"
           >
             <div className="pt-6 mt-6 border-t border-glass-border">
+              <p className="text-muted-foreground mb-5 text-base">{project.tagline}</p>
               <ul className="space-y-3 mb-6">
                 {project.details.map((d, i) => (
                   <li key={i} className="text-muted-foreground text-sm md:text-base leading-relaxed flex gap-3">
