@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Mail, MapPin } from "lucide-react";
+import { Send, Mail, Github, Linkedin } from "lucide-react";
 import { toast } from "sonner";
 import { z } from "zod";
 
@@ -50,16 +50,20 @@ const ContactSection = () => {
             className="md:col-span-2 flex flex-col gap-6"
           >
             <p className="text-muted-foreground leading-relaxed">
-              Have a project in mind? Let's create something extraordinary together.
+              Have a project in mind? Let's build something exceptional together.
             </p>
-            <div className="flex items-center gap-3 text-muted-foreground">
+            <a href="mailto:haris@example.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
               <Mail size={18} className="text-primary" />
               <span>haris@example.com</span>
-            </div>
-            <div className="flex items-center gap-3 text-muted-foreground">
-              <MapPin size={18} className="text-primary" />
-              <span>Pakistan</span>
-            </div>
+            </a>
+            <a href="https://github.com/Harismehd" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+              <Github size={18} className="text-primary" />
+              <span>github.com/Harismehd</span>
+            </a>
+            <a href="#" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+              <Linkedin size={18} className="text-primary" />
+              <span>LinkedIn</span>
+            </a>
           </motion.div>
 
           <motion.form
