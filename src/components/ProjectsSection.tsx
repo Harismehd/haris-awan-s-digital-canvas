@@ -18,6 +18,7 @@ const projects: Project[] = [
     tagline: "Real-Time ML Diagnostic Engine",
     type: "Logic Lens / Personal",
     stack: ["Python", "LightGBM", "FastAPI", "scikit-learn", "NumPy"],
+    live: "https://harisawan246-cognis.hf.space/dashboard",
     github: "https://github.com/Harismehd/Cognis",
     details: [
       "Designed and trained a 6-model LightGBM ensemble (risk, error type, intervention, tone, speak, action) on 87,300 synthetic examples covering 21 Python error categories.",
@@ -32,6 +33,7 @@ const projects: Project[] = [
     tagline: "Socratic Python Learning IDE",
     type: "Personal",
     stack: ["React 18", "Monaco Editor", "Pyodide", "FastAPI"],
+    live: "https://harisawan246-logiclens.hf.space/",
     github: "https://github.com/Harismehd/LogicLens",
     details: [
       "Built a browser-based Python IDE with real-time ML-powered error diagnosis.",
@@ -72,7 +74,6 @@ const projects: Project[] = [
     tagline: "Open-Source Cybersecurity Tool",
     type: "Personal",
     stack: ["Full-stack"],
-    live: "https://nexus-shield-com.vercel.app",
     github: "https://github.com/Harismehd/NexusShield",
     details: [
       "Open-source cybersecurity platform.",
