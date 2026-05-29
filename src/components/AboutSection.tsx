@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FileText } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
 
 const AboutSection = () => {
@@ -50,9 +51,9 @@ const AboutSection = () => {
               me to ship fast and effectively. I take pride in my ability to work
               independently and deliver high-quality solutions.
             </p>
-            <div className="flex gap-8 justify-center md:justify-start">
+            <div className="flex gap-8 justify-center md:justify-start mb-8">
               {[
-                { value: "5+", label: "Production Apps" },
+                { value: "6+", label: "Production Apps" },
                 { value: "SaaS", label: "Multi-Tenant" },
                 { value: "AI/ML", label: "Focus" },
               ].map((stat) => (
@@ -62,6 +63,17 @@ const AboutSection = () => {
                 </div>
               ))}
             </div>
+            <motion.a
+              href="https://drive.google.com/file/d/1BMo2TF-vetso1ge91d7CGL9njHhGgrwJ/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 glow-cyan"
+            >
+              <FileText className="w-5 h-5" />
+              Download CV
+            </motion.a>
           </motion.div>
         </div>
       </div>
