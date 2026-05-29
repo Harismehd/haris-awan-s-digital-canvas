@@ -46,7 +46,7 @@ const projects: Project[] = [
     tagline: "Enterprise Gym Management SaaS",
     type: "Personal",
     stack: ["Node.js", "React", "PostgreSQL", "WebSocket", "Supabase"],
-    live: "https://nexorabyharis.vercel.app",
+    live: "https://gymflowbyharis.vercel.app/",
     details: [
       "Multi-tenant SaaS architecture with Row-Level Security isolation.",
       "Advanced payment reconciliation and fraud detection systems.",
